@@ -26,8 +26,8 @@ Files get saved to the **SD card root** (where `SouthPark/config.txt` and the
 ## Server setup
 
 The DSi's socket stack (dswifi + calico) has **no TLS**, so everything must be
-served over **plain HTTP**. Host the following on any web server (the bundled
-`C:\Users\camer\SouthparkDS-server` is one such server):
+served over **plain HTTP**. Host the following on any web server (the companion
+[southparkds-server](https://github.com/Qwerty9957/southparkds-server) is one such server):
 
 ```
 <prefix>/index.json       episode index (JSON, see below)
@@ -105,7 +105,8 @@ Requires devkitPro with the nds/calico toolchain on **Windows** (this was
 tested from WSL by invoking the installed Windows toolchain):
 
 ```
-C:\Users\camer\SouthparkDS> make
+cd <the repo checkout>
+make
 ```
 
 or, from WSL, call the Windows make directly:
