@@ -20,8 +20,8 @@ Makefile                 <- devkitARM / calico build (see "Building")
 tools/release.sh         <- build + icon + tag + GitHub release + DSi upload
 ```
 
-Files get saved to `/SouthPark/videos/` on the SD card, named
-`<season>_<episode>.fv` (e.g. `3_2.fv`).
+Files get saved to the **SD card root** (where `SouthPark/config.txt` and the
+`SouthPark/` dir live), named `<season>_<episode>.fv` (e.g. `3_2.fv`).
 
 ## Server setup
 
@@ -94,9 +94,9 @@ Seasons appear in the order given; episodes within a season likewise.
    "Internet -> Nintendo WiFi Connection Settings" (the app uses the stored
    WFC/dsiWiFi profile).
 3. Run `SouthparkDS.nds` from TWiLight Menu++.
-4. Pick a season, pick an episode; the app downloads it to `/SouthPark/videos`.
+4. Pick a season, pick an episode; the app downloads it to the SD card root.
 5. Press START to return to the TWiLight Menu++ and open the
-   `/SouthPark/videos/<season>_<episode>.fv` file there - TWiLight routes `.fv`
+   `<season>_<episode>.fv` file there - TWiLight routes `.fv`
    to FastVideoDS Player automatically.
 
 ## Building

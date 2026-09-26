@@ -158,23 +158,15 @@ static int copy_file(const char *dst, const char *src) {
 }
 
 static int ensure_dirs(void) {
-	char d1[64], d2[64];
+	char d1[64];
 	int i;
 	for (i = 0; i < 2; i++) {
 		snprintf(d1, sizeof d1, "%s/SouthPark", roots[i]);
-		snprintf(d2, sizeof d2, "%s/SouthPark/videos", roots[i]);
 		if (!dir_exists(d1)) {
 			dbg_clr("s2 mkdir1%"); {
 				int r1 = mkdir(d1, 0755);
 				dbg_clr("s2 mk1 ret");
 				if (r1 != 0 && errno != EEXIST) continue;
-			}
-		}
-		if (!dir_exists(d2)) {
-			dbg_clr("s2 mkdir2%"); {
-				int r2 = mkdir(d2, 0755);
-				dbg_clr("s2 mk2 ret");
-				if (r2 != 0 && errno != EEXIST) continue;
 			}
 		}
 		dbg_clr("s2 root ok");
