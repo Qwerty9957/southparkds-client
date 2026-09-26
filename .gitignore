@@ -1,0 +1,7 @@
+# build outputs
+build/
+SouthparkDS.nds
+SouthparkDS.elf
+*.o
+*.d
+*.map
